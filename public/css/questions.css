@@ -161,6 +161,7 @@ ul {
     color: #33658a;
     background-color: #cee0ed;
     border-color: rgba(0,0,0,0);
+    cursor: pointer;
 }
 
 .nav_button {
@@ -194,13 +195,39 @@ ul {
 
 #question-form {
   width: 600px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#question-form textarea {
-  width: 598px;
+#question-form input {
+  padding: 5px 0px;
+  margin: 5px 0px;
 }
+
+#question-form textarea {
+  margin-top: 20px;
+}
+
+#question-form .button {
+  background-color: #0095ff;
+  border-color: #07c;
+  color: white;
+  border-radius: 2px;
+  padding: 2px;
+  box-shadow: inset 0 1px 0 #66bfff;
+  height: 35px;
+  width: 135px;
+  font-size: .8em;
+
+}
+
+#question-form .button:hover {
+  cursor: pointer;
+  transition: .1s;
+  background-color: #07c;
+}
+
 
 .vote-button {
   background-color: white;
@@ -209,6 +236,5 @@ ul {
 }
 
 .answer-form {
-
   margin-bottom: 200px;
 }
