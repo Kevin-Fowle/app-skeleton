@@ -3,12 +3,12 @@
 <div id="question-form">
   <form action='/questions' method='POST' id='question-form'>
     <label>Title</label>
-    <input type='text' name="question[title]" placeholder="What's your snack question? Be specific."><br>
+    <input type='text' name="question[title]" size="60" placeholder="What's your snack question? Be specific."><br>
     <textarea name="question[body]" cols="92" rows="15"></textarea>
     <hr>
     <hr>
-    <label>Tags</label>
-    <input type='text' name="tag_questions" placeholder="Input tags here, seperated by commas"><br>
-    <input type="submit" value="Post Your Question">
+    <label>Tags</label><br>
+    <input type='text' name="tag_questions" size="60" placeholder="Input tags here, seperated by commas"><br>
+    <input class="button" type="submit" value="Post Your Question">
   </form>
 </div>

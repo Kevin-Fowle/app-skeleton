@@ -3,9 +3,10 @@
   <br>
   <br>
 
-  <% @tags.each do |tag| %>
-    <span class="tag-index-item <%= tag.id %>"><a href="/questions/tagged/<%= tag.name %>" class="post-tag" title="" rel="tag"><%= tag.name %></a>
-    <br>
-    </span>
-  <% end %>
+<div class='question-tags columns'>
+  <ul>
+     <% @tags.each do |tag| %>
+      <li class='small-text tag-list tag-index-item <%= tag.id %>'><a href="/questions/tagged/<%= tag.name %>" class="post-tag" title="" rel="tag"><%= tag.name %></a></li><br>
+    <% end %>
+  </ul>
 </div>
