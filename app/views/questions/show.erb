@@ -70,7 +70,7 @@
             <p><a href = "/users/<%=answer.answerer_id%>/profile"><%= answer.answerer.try(:display_name) %></a></p>
           </div>
 
-          <div class='comment-body'>
+          <div class='comment-list'>
             <% answer.comments.each do |comment| %>
               <p><%= comment.body %></p>
               <hr>
