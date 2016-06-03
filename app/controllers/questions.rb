@@ -47,18 +47,16 @@ post '/questions/:id/answers' do
   end
 end
 
-post '/questions/:id/answers/:answer_id/comments' do
-  @question = Question.find(params[:id])
+post '/questions/:question_id/answers/:answer_id/comments' do
+  @question = Question.find(params[:question_id])
   @answer = Answer.find(params[:answer_id])
   @comment = Comment.new(params[:comment])
   @comment.commentable = @answer
-  # above line do these:
-  # @comment.commentable_id = @question.id
-  # @comment.commentable_type = @question.class.name
   @comment.commenter = current_user
   if request.xhr?
     if @comment.save
-      200
+      content_type :json
+      return @comment.to_json
     else
       @errors = @comment.errors.full_messages
       return false
