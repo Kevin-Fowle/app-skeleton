@@ -5,7 +5,8 @@ $(document).ready(function() {
     commentForm.show();
   });
 
-  $(".new_commen_form").on("submit", function(event) {
+  $(".new_comment_form").on("submit", function(event) {
+    
     event.preventDefault();
 
     var form = $(this);
